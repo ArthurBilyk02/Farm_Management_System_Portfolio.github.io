@@ -1,69 +1,84 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+.hidden.menu {
+    display: none;
+  }
 
-body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    line-height: 1.6;
-}
+  .masthead.segment {
+    min-height: 700px;
+    padding: 1em 0em;
+  }
+  .masthead .logo.item img {
+    margin-right: 1em;
+  }
+  .masthead .ui.menu .ui.button {
+    margin-left: 0.5em;
+  }
+  .masthead h1.ui.header {
+    margin-top: 3em;
+    margin-bottom: 0em;
+    font-size: 4em;
+    font-weight: normal;
+  }
+  .masthead h2 {
+    font-size: 1.7em;
+    font-weight: normal;
+  }
 
-/* Header */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-}
+  .ui.vertical.stripe {
+    padding: 8em 0em;
+  }
+  .ui.vertical.stripe h3 {
+    font-size: 2em;
+  }
+  .ui.vertical.stripe .button + h3,
+  .ui.vertical.stripe p + h3 {
+    margin-top: 3em;
+  }
+  .ui.vertical.stripe .floated.image {
+    clear: both;
+  }
+  .ui.vertical.stripe p {
+    font-size: 1.33em;
+  }
+  .ui.vertical.stripe .horizontal.divider {
+    margin: 3em 0em;
+  }
 
-header nav a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-}
+  .quote.stripe.segment {
+    padding: 0em;
+  }
+  .quote.stripe.segment .grid .column {
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
 
-/* Sections */
-section {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
-}
+  .footer.segment {
+    padding: 5em 0em;
+  }
 
-/* Project Cards */
-.project-card {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    margin-top: 1rem;
-}
+  .secondary.pointing.menu .toc.item {
+    display: none;
+  }
 
-.project-card a {
-    color: #007acc;
-    text-decoration: none;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f4f4f4;
-}
-
-/* Fomantic UI Overrides (if needed) */
-.ui.inverted.segment {
-    background-color: #333; /* Match your header color */
-}
-
-.ui.vertical.segment {
-    padding: 4rem 0; /* Add more padding for sections */
-}
-
-.ui.card {
-    margin: 1rem; /* Add margin to cards */
-}
-
-.ui.form .field label {
-    color: #333; /* Ensure labels are visible */
-}
+  @media only screen and (max-width: 700px) {
+    .ui.fixed.menu {
+      display: none !important;
+    }
+    .secondary.pointing.menu .item,
+    .secondary.pointing.menu .menu {
+      display: none;
+    }
+    .secondary.pointing.menu .toc.item {
+      display: block;
+    }
+    .masthead.segment {
+      min-height: 350px;
+    }
+    .masthead h1.ui.header {
+      font-size: 2em;
+      margin-top: 1.5em;
+    }
+    .masthead h2 {
+      margin-top: 0.5em;
+      font-size: 1.5em;
+    }
+  }
