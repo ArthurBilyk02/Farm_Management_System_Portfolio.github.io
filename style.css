@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
 }
 
+/* Header */
 header {
     background-color: #333;
     color: #fff;
@@ -24,12 +25,14 @@ header nav a {
     text-decoration: none;
 }
 
+/* Sections */
 section {
     padding: 2rem;
     max-width: 800px;
     margin: auto;
 }
 
+/* Project Cards */
 .project-card {
     border: 1px solid #ddd;
     padding: 1rem;
@@ -41,8 +44,26 @@ section {
     text-decoration: none;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 1rem;
     background-color: #f4f4f4;
+}
+
+/* Fomantic UI Overrides (if needed) */
+.ui.inverted.segment {
+    background-color: #333; /* Match your header color */
+}
+
+.ui.vertical.segment {
+    padding: 4rem 0; /* Add more padding for sections */
+}
+
+.ui.card {
+    margin: 1rem; /* Add margin to cards */
+}
+
+.ui.form .field label {
+    color: #333; /* Ensure labels are visible */
 }

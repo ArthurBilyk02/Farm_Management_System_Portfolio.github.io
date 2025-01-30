@@ -1,48 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  
+  <!-- Semantic UI CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js"></script>
+
+  <style>
+    .masthead {
+      min-height: 500px;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    
+    .masthead h1 {
+      font-size: 3em;
+      font-weight: bold;
+    }
+    
+    .masthead p {
+      font-size: 1.5em;
+    }
+    
+    .ui.card img {
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .footer {
+      background: #1b1c1d;
+      color: white;
+      padding: 40px 0;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>My Portfolio</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Your bio goes here...</p>
-    </section>
+<!-- Navbar -->
+<div class="ui large top fixed menu">
+  <div class="ui container">
+    <a href="#" class="header item">My Portfolio</a>
+    <a href="#about" class="item">About Me</a>
+    <a href="#projects" class="item">My Projects</a>
+    <a href="#contact" class="item">Contact Me</a>
+  </div>
+</div>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <h3>Project Title</h3>
-            <p>Description of your project.</p>
-            <a href="link-to-project">View Project</a>
+<!-- Hero Section -->
+<div class="ui vertical masthead segment">
+  <div class="ui container">
+    <h1>Hi, I'm [Your Name]</h1>
+    <p>I'm a software developer specializing in web development and security.</p>
+  </div>
+</div>
+
+<!-- About Me -->
+<div id="about" class="ui vertical stripe segment">
+  <div class="ui text container">
+    <h2 class="ui header">About Me</h2>
+    <p>
+      I'm passionate about building secure and scalable applications. 
+      I work with modern technologies like Kotlin, JavaScript, and AWS.
+    </p>
+    <p>
+      In my free time, I explore cybersecurity topics and develop open-source projects.
+    </p>
+  </div>
+</div>
+
+<!-- My Projects -->
+<div id="projects" class="ui vertical stripe segment">
+  <div class="ui container">
+    <h2 class="ui header center aligned">My Projects</h2>
+    <div class="ui three stackable cards">
+      <div class="ui card">
+        <div class="image">
+          <img src="https://via.placeholder.com/300" alt="Project 1">
         </div>
-    </section>
+        <div class="content">
+          <div class="header">Project 1</div>
+          <div class="description">
+            A web app for managing events securely.
+          </div>
+        </div>
+      </div>
+      
+      <div class="ui card">
+        <div class="image">
+          <img src="https://via.placeholder.com/300" alt="Project 2">
+        </div>
+        <div class="content">
+          <div class="header">Project 2</div>
+          <div class="description">
+            A secure database system for farm management.
+          </div>
+        </div>
+      </div>
+      
+      <div class="ui card">
+        <div class="image">
+          <img src="https://via.placeholder.com/300" alt="Project 3">
+        </div>
+        <div class="content">
+          <div class="header">Project 3</div>
+          <div class="description">
+            An Android app for Formula 1 driver tracking.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Skill 1</li>
-            <li>Skill 2</li>
-            <li>Skill 3</li>
-        </ul>
-    </section>
+<!-- Contact Me -->
+<div id="contact" class="ui vertical stripe segment">
+  <div class="ui text container">
+    <h2 class="ui header">Contact Me</h2>
+    <p>I'd love to hear from you! Reach out via the form below:</p>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    </section>
+    <form class="ui form">
+      <div class="field">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Your Name">
+      </div>
+      <div class="field">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Your Email">
+      </div>
+      <div class="field">
+        <label>Message</label>
+        <textarea placeholder="Your Message"></textarea>
+      </div>
+      <button class="ui primary button" type="submit">Send</button>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="ui inverted vertical footer segment">
+  <div class="ui container">
+    <div class="ui stackable inverted divided grid">
+      <div class="three wide column">
+        <h4 class="ui inverted header">Links</h4>
+        <div class="ui inverted link list">
+          <a href="#" class="item">GitHub</a>
+          <a href="#" class="item">LinkedIn</a>
+          <a href="#" class="item">Twitter</a>
+        </div>
+      </div>
+      <div class="seven wide column">
+        <h4 class="ui inverted header">Thank You for Visiting</h4>
+        <p>Feel free to check out my work and get in touch.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
