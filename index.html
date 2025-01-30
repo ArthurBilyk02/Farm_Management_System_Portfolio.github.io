@@ -7,42 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>My Portfolio</title>
 
-  <!-- Semantic UI CDN -->
+  <!-- Semantic UI CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="Homepage%20-%20Semantic_files/reset.css">
-  <link rel="stylesheet" type="text/css" href="Homepage%20-%20Semantic_files/site.css">
-
-  <link rel="stylesheet" type="text/css" href="Homepage%20-%20Semantic_files/container.css">
-  <link rel="stylesheet" type="text/css" href="Homepage%20-%20Semantic_files/grid.css">
-  <link rel="stylesheet" type="text/css" href="Homepage%20-%20Semantic_files/header.css">
-  <link rel="stylesheet" type="text/css" href="Homepage%20-%20Semantic_files/image.css">
-  <link rel="stylesheet" type="text/css" href="Homepage%20-%20Semantic_files/menu.css">
-
-  <link rel="stylesheet" type="text/css" href="Homepage%20-%20Semantic_files/divider.css">
-  <link rel="stylesheet" type="text/css" href="Homepage%20-%20Semantic_files/dropdown.css">
-  <link rel="stylesheet" type="text/css" href="Homepage%20-%20Semantic_files/segment.css">
-  <link rel="stylesheet" type="text/css" href="Homepage%20-%20Semantic_files/button.css">
-  <link rel="stylesheet" type="text/css" href="Homepage%20-%20Semantic_files/list.css">
-  <link rel="stylesheet" type="text/css" href="Homepage%20-%20Semantic_files/icon.css">
-  <link rel="stylesheet" type="text/css" href="Homepage%20-%20Semantic_files/sidebar.css">
-  <link rel="stylesheet" type="text/css" href="Homepage%20-%20Semantic_files/transition.css">
-
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
-
-</style>
-
-<!-- Load JavaScript -->
-<script src="assets/library/jquery.min.js"></script>
-<script src="../dist/components/visibility.js"></script>
-<script src="../dist/components/sidebar.js"></script>
-<script src="../dist/components/transition.js"></script>
-<script src="script.js"></script>
 </head>
 <body class="pushable">
-
 
 <!-- Following Menu -->
 <div class="ui large top fixed hidden menu">
@@ -153,20 +122,25 @@
     <h2 class="ui header">Contact Me</h2>
     <p>I'd love to hear from you! Reach out via the form below:</p>
 
-    <form class="ui form">
+    <form id="contact-form" class="ui form">
       <div class="field">
         <label>Name</label>
-        <input type="text" name="name" placeholder="Your Name">
+        <input type="text" id="name" name="name" placeholder="Your Name">
       </div>
       <div class="field">
         <label>Email</label>
-        <input type="email" name="email" placeholder="Your Email">
+        <input type="email" id="email" name="email" placeholder="Your Email">
       </div>
       <div class="field">
         <label>Message</label>
-        <textarea placeholder="Your Message"></textarea>
+        <textarea id="message" placeholder="Your Message"></textarea>
       </div>
-      <button class="ui primary button" type="submit">Send</button>
+
+      <!-- Send Button -->
+      <button id="submit-btn" type="button" class="ui primary button">Send</button>
+
+      <!-- Message Placeholder -->
+      <div id="form-message" class="ui hidden message"></div>
     </form>
   </div>
 </div>
@@ -190,6 +164,9 @@
     </div>
   </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js"></script>
 
+<script src="script.js"></script>
 </body>
 </html>

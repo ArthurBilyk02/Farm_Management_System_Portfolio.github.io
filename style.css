@@ -82,3 +82,8 @@
       font-size: 1.5em;
     }
   }
+  .error-border {
+    border: 2px solid red !important;
+    background-color: #ffe6e6;
+  }
+  
