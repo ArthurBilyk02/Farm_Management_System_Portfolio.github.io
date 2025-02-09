@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farm Management System - Project Details</title>
+
+  <!-- Semantic UI CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<div class="ui large top fixed menu">
+  <div class="ui container">
+    <a href="index.html" class="item">Home</a>
+    <a href="project.html" class="active item">Project</a>
+  </div>
+</div>
+
+<!-- Project Overview -->
+<div class="ui container" style="margin-top: 80px;">
+  <h1 class="ui center aligned header">Farm Management System</h1>
+  <div class="ui stackable grid">
+    <div class="eight wide column">
+    </div>
+    <div class="ui center aligned header">
+        <h2 class="ui header">Project Overview</h2>
+        <p>
+          The Farm Management System is designed to help farm owners and managers efficiently track and optimize various farm operations. 
+          The goal of this project is to create a secure, data-driven application that improves farm productivity, ensures proper animal care, 
+          and simplifies financial management.
+        </p>
+        <p>
+          By integrating real-time data tracking, automated feeding schedules, and detailed health monitoring, 
+          this system aims to minimize losses, enhance decision-making, and promote sustainable farm management practices.
+        </p>
+        <p>
+          The key objectives of this project include:
+        </p>
+        <ul class="ui list">
+          <li>Efficient Record-Keeping – Centralized data management for animals, feeding schedules, transactions, and medical history.</li>
+          <li>Improved Farm Insights – Tracking environmental conditions, animal health trends, and stock levels to optimize farm efficiency.</li>
+          <li>Secure User Management – Implementing role-based authentication for administrators and employees to ensure authorized access.</li>
+          <li>Automation and Alerts – Reducing manual errors with automated feeding schedules, low-stock alerts, and performance metrics.</li>
+          <li>Scalability and Future Enhancements – Supporting future integrations such as IoT-based monitoring, mobile applications, and AI-driven analytics.</li>
+        </ul>              
+    </div>
+  </div>
+
+  <div class="ui section divider"></div>
+
+  <!-- Features -->
+  <h2 class="ui header center aligned">Key Features</h2>
+  <div class="ui stackable four column grid">
+    
+    <div class="column">
+      <div class="ui card">
+        <div class="content">
+          <div class="header">📅 Feeding Schedule</div>
+          <div class="description">
+            Defines species-specific feeding schedules to optimize animal nutrition and welfare.
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="ui card">
+        <div class="content">
+          <div class="header">🍽 Feeding Management</div>
+          <div class="description">
+            Tracks individual feeding events for animals to ensure compliance with species-specific schedules.
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="ui card">
+        <div class="content">
+          <div class="header">💰 Financial Transactions</div>
+          <div class="description">
+            Manages purchases and sales, providing a detailed financial overview of farm economics.
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="ui card">
+        <div class="content">
+          <div class="header">🔬 Medical History</div>
+          <div class="description">
+            Logs veterinary visits and treatments to maintain a complete health record for each animal.
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="ui card">
+        <div class="content">
+          <div class="header">📊 Performance Metrics</div>
+          <div class="description">
+            Tracks productivity and animal growth using key performance indicators for better decision-making.
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="ui card">
+        <div class="content">
+          <div class="header">🔍 Environmental Monitoring</div>
+          <div class="description">
+            Monitors temperature, humidity, and water quality to improve farm efficiency and animal well-being.
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="ui card">
+        <div class="content">
+          <div class="header">📦 Stock and Inventory Control</div>
+          <div class="description">
+            Tracks feed, medical supplies, and other farm resources with automated restocking alerts.
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="ui card">
+        <div class="content">
+          <div class="header">⚙️ Role-Based User Access</div>
+          <div class="description">
+            Implements secure authentication and access control for admins and employees.
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="ui card">
+        <div class="content">
+          <div class="header">🔔 Notifications & Alerts</div>
+          <div class="description">
+            Sends real-time alerts for low stock, overdue feeding, and medical issues.
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="ui card">
+        <div class="content">
+          <div class="header">📜 Audit Logs</div>
+          <div class="description">
+            Keeps track of all system changes to ensure accountability and prevent unauthorized modifications.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="ui section divider"></div>
+
+  <!-- Tables for System Data -->
+  <h2 class="ui header center aligned">Database Structure</h2>
+
+<!-- Core Tables -->
+<h3 class="ui header">Core Tables</h3>
+
+<!-- Farm Table -->
+<h4 class="ui header">Farm</h4>
+<table class="ui celled table">
+  <thead>
+    <tr><th>Attribute</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>farm_id</td><td>Primary Key</td></tr>
+    <tr><td>employee_id</td><td>Foreign Key to User (farm employee)</td></tr>
+    <tr><td>location</td><td>Location of the farm</td></tr>
+    <tr><td>owner</td><td>Owner of the farm</td></tr>
+    <tr><td>animal_types</td><td>Types of animals managed</td></tr>
+  </tbody>
+</table>
+
+<!-- Species Table -->
+<h4 class="ui header">Species</h4>
+<table class="ui celled table">
+  <thead>
+    <tr><th>Attribute</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>species_id</td><td>Primary Key</td></tr>
+    <tr><td>species_name</td><td>Name of the species</td></tr>
+    <tr><td>description</td><td>Additional species information</td></tr>
+  </tbody>
+</table>
+
+<!-- Herd Table -->
+<h4 class="ui header">Herd</h4>
+<table class="ui celled table">
+  <thead>
+    <tr><th>Attribute</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>herd_id</td><td>Primary Key</td></tr>
+    <tr><td>herd_name</td><td>Name of the herd</td></tr>
+    <tr><td>farm_id</td><td>Foreign Key to Farm</td></tr>
+    <tr><td>species_id</td><td>Foreign Key to Species</td></tr>
+    <tr><td>size</td><td>Number of animals</td></tr>
+    <tr><td>date_created</td><td>Date the herd was established</td></tr>
+    <tr><td>schedule_id</td><td>Links herd to feeding schedule</td></tr>
+    <tr><td>health_status</td><td>Overall health status</td></tr>
+  </tbody>
+</table>
+
+<!-- Animal Table -->
+<h4 class="ui header">Animal</h4>
+<table class="ui celled table">
+  <thead>
+    <tr><th>Attribute</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>animal_id</td><td>Primary Key</td></tr>
+    <tr><td>herd_id</td><td>Foreign Key to Herd</td></tr>
+    <tr><td>species_id</td><td>Foreign Key to Species</td></tr>
+    <tr><td>farm_id</td><td>Foreign Key to Farm</td></tr>
+    <tr><td>name</td><td>Name of the animal</td></tr>
+    <tr><td>dob</td><td>Date of birth</td></tr>
+  </tbody>
+</table>
+
+<!-- Feeding Schedule Table -->
+<h4 class="ui header">Feeding Schedule</h4>
+<table class="ui celled table">
+  <thead>
+    <tr><th>Attribute</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>schedule_id</td><td>Primary Key</td></tr>
+    <tr><td>herd_id</td><td>Foreign Key to Herd</td></tr>
+    <tr><td>food_type</td><td>Type of food</td></tr>
+    <tr><td>feeding_interval</td><td>Interval between feedings</td></tr>
+    <tr><td>recommended_food</td><td>Suggested food type</td></tr>
+    <tr><td>health</td><td>Health notes related to feeding</td></tr>
+  </tbody>
+</table>
+
+<div class="ui section divider"></div>
+
+<!-- Supporting Tables -->
+<h3 class="ui header">Supporting Tables</h3>
+
+<!-- Environmental Conditions -->
+<h4 class="ui header">Environmental Conditions</h4>
+<table class="ui celled table">
+  <thead>
+    <tr><th>Attribute</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>env_id</td><td>Primary Key</td></tr>
+    <tr><td>farm_id</td><td>Foreign Key to Farm</td></tr>
+    <tr><td>temperature</td><td>Recorded temperature</td></tr>
+    <tr><td>humidity</td><td>Humidity percentage</td></tr>
+    <tr><td>water_quality</td><td>Water quality indicators</td></tr>
+  </tbody>
+</table>
+
+<!-- Medical History -->
+<h4 class="ui header">Medical History</h4>
+<table class="ui celled table">
+  <thead>
+    <tr><th>Attribute</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>medical_id</td><td>Primary Key</td></tr>
+    <tr><td>herd_id</td><td>Foreign Key to Herd</td></tr>
+    <tr><td>visit_id</td><td>Foreign Key to Veterinary Visits</td></tr>
+    <tr><td>health_issue_id</td><td>Foreign Key to Health Issues</td></tr>
+    <tr><td>treatment</td><td>Details of treatment</td></tr>
+    <tr><td>vet_notes</td><td>Notes from veterinarian</td></tr>
+    <tr><td>date</td><td>Date of treatment</td></tr>
+  </tbody>
+</table>
+
+<!-- Product Stock -->
+<h4 class="ui header">Product Stock</h4>
+<table class="ui celled table">
+  <thead>
+    <tr><th>Attribute</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>product_id</td><td>Primary Key</td></tr>
+    <tr><td>food_type</td><td>Foreign Key to Feeding Type</td></tr>
+    <tr><td>stock_level</td><td>Current stock level</td></tr>
+    <tr><td>reorder_threshold</td><td>Minimum level before reorder</td></tr>
+    <tr><td>supplier_id</td><td>Foreign Key to Supplier</td></tr>
+  </tbody>
+</table>
+
+<!-- User Management -->
+<h3 class="ui header">User Management</h3>
+<h4 class="ui header">User</h4>
+<table class="ui celled table">
+  <thead>
+    <tr><th>Attribute</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>user_id</td><td>Primary Key</td></tr>
+    <tr><td>employee_id</td><td>Employee ID</td></tr>
+    <tr><td>email</td><td>User email</td></tr>
+    <tr><td>role_id</td><td>Foreign Key to User Roles</td></tr>
+  </tbody>
+</table>
+
+<!-- Supplier Table -->
+<h4 class="ui header">Supplier</h4>
+<table class="ui celled table">
+  <thead>
+    <tr><th>Attribute</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>supplier_id</td><td>Primary Key</td></tr>
+    <tr><td>supplier_name</td><td>Name of supplier</td></tr>
+    <tr><td>contact_info</td><td>Supplier contact details</td></tr>
+    <tr><td>product_type</td><td>Type of products supplied</td></tr>
+  </tbody>
+</table>
+
+  <div class="ui section divider"></div>
+
+  <!-- Technologies Used -->
+  <h2 class="ui header center aligned">Technologies Used</h2>
+  <div class="ui three stackable cards">
+    <div class="ui card">
+      <div class="content">
+        <div class="header">Backend</div>
+        <div class="description">Express.js, MySQL</div>
+      </div>
+    </div>
+    <div class="ui card">
+      <div class="content">
+        <div class="header">Frontend</div>
+        <div class="description">React.js</div>
+      </div>
+    </div>
+    <div class="ui card">
+      <div class="content">
+        <div class="header">Security Features</div>
+        <div class="description">JWT Authentication, bcrypt, Role-Based Access</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui section divider"></div>
+</div>
+
+<!-- Footer -->
+<div class="ui inverted vertical footer segment">
+  <div class="ui container">
+    <p class="ui center aligned">© 2025 Arthur | Final Year Project</p>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js"></script>
+
+</body>
+</html>
